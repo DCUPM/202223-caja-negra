@@ -11,23 +11,24 @@ public class BinaryTreeTesting {
 
     @BeforeEach
     public void init() {
-        bt = new BinaryTree(0);
-        bt.insert(1, bt.getRoot(), true);
-        bt.insert(2, bt.getRoot(), false);
-        bt.insert(3, bt.search(1), true);
-        bt.insert(4, bt.search(1), false);
-        bt.insert(5, bt.search(2), true);
-        bt.insert(6, bt.search(2), false);
+        bt = new BinaryTree("0");
+        bt.insert("1", bt.getRoot(), true);
+        bt.insert("2", bt.getRoot(), false);
+        bt.insert("3", bt.search("1"), true);
+        bt.insert("4", bt.search("1"), false);
+        bt.insert("5", bt.search("2"), true);
+        bt.insert("6", bt.search("2"), false);
 
         System.out.println("*** innit ***");
+        System.out.print(bt.toString());
     }
 
     @Test
     @DisplayName("Probando metodo depth()")
     public void depthTesting() {
-        assertEquals(3, bt.depth());
+        assertEquals(2, bt.depth());
         System.out.println("*** prueba depth() ***");
-        assertEquals(2, bt.depth(bt.search(1)));
+        assertEquals(1, bt.depth(bt.search("1")));
         System.out.println("*** prueba depth(Node<T> node) ***");
     }
 
