@@ -42,7 +42,14 @@
 			<artifactId>junit-platform-suite</artifactId>
 			<version>1.9.1</version>
 			<scope>test</scope>
-		</dependency>		
+		</dependency>
+        <dependency>
+            <groupId>com.binarytree</groupId>
+            <artifactId>BinaryTree</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/binarytree.jar</systemPath>
+        </dependency>
 	</dependencies>
 
   <build>
