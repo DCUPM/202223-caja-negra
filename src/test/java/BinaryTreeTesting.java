@@ -61,8 +61,12 @@ public class BinaryTreeTesting {
     @DisplayName("Probando iterator()")
     public void iteratorTesting() {
         Iterator it = bt.iterator();
-        System.out.println("*** Probando iterator() ***");
+        String itString = "";
         while (it.hasNext())
-            System.out.print(it.next().toString()+" ");
+            itString += it.next().toString()+" ";
+        String sol = "0 1 3 4 2 5 6 ";
+        System.out.println("*** Probando iterator() ***");
+        assertEquals(sol, itString);
+        System.out.print(itString);
     }
 }
